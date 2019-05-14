@@ -7,7 +7,7 @@
         <title>
             Abigail
         </title>
-        <link href="{{asset('ABIGAIL/logo/Abigail_Logo.png')}}" rel="icon">
+        <link href="{{url('ABIGAIL/logo/Abigail_Logo.png')}}" rel="icon">
         <link rel="stylesheet" href="{{asset('user/dist/css/font-awesome.min.css')}}"/>
         <link rel="stylesheet" href="{{asset('user/dist/css/foundation.css')}}"/>
         <link rel="stylesheet" href="{{asset('user/dist/css/app.css')}}"/>
@@ -20,9 +20,7 @@
             <div style="color:white" class="top-bar-left">
                 <h4 class="brand-title">
                     <a href="{{route('welcome')}}">
-                        <i class="fa fa-home fa-lg" aria-hidden="true">
-                        </i>
-                       Abigail Shirts
+                    <img src="{{url('ABIGAIL/logo/ABIGAIL_CLOTHING_LOGO_WHITE.png')}}" width="155" height="75" alt="">
                     </a>
                 </h4>
             </div>
