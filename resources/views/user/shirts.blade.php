@@ -13,7 +13,7 @@
     </li>
     <li>
         <a href="{{ route('cart.index') }}">
-            <i class="fa fa-shopping-cart fa-2x" aria-hidden="true">
+            <i class="fa fa-shopping-cart" aria-hidden="true">
             </i>
             CART
             <span class="alert badge">
@@ -26,7 +26,7 @@
 @section('content')
     <div class="row">
         @foreach($data as $dt)
-        <div class="small-3 columns">
+        <div class="small-6 large-3 medium-3 columns">
             <div class="item-wrapper">
                 <div class="img-wrapper">
                     <a href="{{ route('cart.edit', $dt->id) }}" class="button expanded add-to-cart">

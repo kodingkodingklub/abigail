@@ -12,7 +12,7 @@
   <!-- Favicons -->
   <link href="{{asset('ABIGAIL/logo/Abigail_Logo.png')}}" rel="icon">
 
-    <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
   <link href="{{asset('Assets/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <link href="{{asset('Assets/lib/advanced-datatable/css/demo_page.css')}}" rel="stylesheet" />
   <link href="{{asset('Assets/lib/advanced-datatable/css/demo_table.css')}}" rel="stylesheet" />
@@ -38,7 +38,9 @@
           <li>
             <form action="{{route('logout')}}" method="POST">
               {{csrf_field()}}
-              <button style="color: #f2f2f2; font-size: 12px;border-radius: 4px;-webkit-border-radius: 4px;border: 1px solid #64c3c2 !important;padding: 5px 15px;margin-right: 15px;background: #4ECDC4;margin-top: 15px;" type="submit">Logout</button>
+              <button
+                style="color: #f2f2f2; font-size: 12px;border-radius: 4px;-webkit-border-radius: 4px;border: 1px solid #64c3c2 !important;padding: 5px 15px;margin-right: 15px;background: #dc3545;margin-top: 15px;"
+                type="submit">Logout</button>
             </form>
           </li>
         </ul>
@@ -67,7 +69,7 @@
     <!-- /MAIN CONTENT -->
     <!--main content end-->
     <!--footer start-->
-    <footer class="site-footer">
+    <footer class="site-footer" style="">
       <div class="text-center">
         <p>
           &copy; Copyrights <strong>2019</strong>. All Rights Reserved
@@ -82,23 +84,24 @@
   <script class="include" type="text/javascript" src="{{asset('Assets/lib/jquery.dcjqaccordion.2.7.js')}}"></script>
   <script src="{{asset('Assets/lib/jquery.scrollTo.min.js')}}"></script>
   <script src="{{asset('Assets/lib/jquery.nicescroll.js')}}" type="text/javascript"></script>
-  <script type="text/javascript" language="javascript" src="{{asset('Assets/lib/advanced-datatable/js/jquery.dataTables.js')}}"></script>
+  <script type="text/javascript" language="javascript"
+    src="{{asset('Assets/lib/advanced-datatable/js/jquery.dataTables.js')}}"></script>
   <script type="text/javascript" src="{{asset('Assets/lib/advanced-datatable/js/DT_bootstrap.js')}}"></script>
   <script src="{{asset('Assets/lib/common-scripts.js')}}"></script>
   <!--script for this page-->
   <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#hidden-table-info').dataTable({
-        
+
       });
     });
 
     $('#edit').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) 
+      var button = $(event.relatedTarget)
       var nama = button.data('mynama')
-      var size = button.data('mysize') 
-      var id = button.data('myid') 
-      var harga = button.data('myharga') 
+      var size = button.data('mysize')
+      var id = button.data('myid')
+      var harga = button.data('myharga')
       var stok = button.data('mystok')
 
       var modal = $(this)
@@ -110,10 +113,10 @@
     })
 
     $('#AddKaryawan').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) 
+      var button = $(event.relatedTarget)
       var nama = button.data('mynama')
-      var email = button.data('myemai') 
-      var ava = button.data('myava') 
+      var email = button.data('myemai')
+      var ava = button.data('myava')
 
       var modal = $(this)
       modal.find('.modal-body #name').val(nama)
@@ -122,8 +125,8 @@
     })
 
     $('#delete-produk').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) 
-      var id = button.data('myid') 
+      var button = $(event.relatedTarget)
+      var id = button.data('myid')
 
       var modal = $(this)
       modal.find('.modal-body #id').val(id)
